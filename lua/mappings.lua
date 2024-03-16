@@ -1,13 +1,10 @@
-require "nvchad.mappings"
+require("nvchad.mappings")
 
 -- add yours here
+vim.keymap.set("n", ";", ":", { desc = "CMD enter command mode" })
 
-local map = vim.keymap.set
-
-map("n", ";", ":", { desc = "CMD enter command mode" })
-
-map("n", "<leader>fm", function()
-  require("conform").format()
+vim.keymap.set("n", "<leader>fm", function()
+	require("conform").format()
 end, { desc = "File Format with conform" })
 
-map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
+vim.keymap.set("i", "jk", "<ESC>", { desc = "Escape insert mode" })
