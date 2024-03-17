@@ -11,7 +11,7 @@ local options = {
 		"deno",
 		"prettier",
 		"eslint_d",
-    "erb_lint",
+    "erb-lint",
     "stylelint",
     "rustywind",
 
@@ -41,7 +41,7 @@ local options = {
 		"gopls",
 		"goimports",
 		"gofumpt",
-		"dlv",
+		"delve",
 	},
 
 	PATH = "skip",

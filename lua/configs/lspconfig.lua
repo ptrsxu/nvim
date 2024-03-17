@@ -5,6 +5,7 @@ local on_init = configs.on_init
 local capabilities = configs.capabilities
 
 local lspconfig = require("lspconfig")
+configs.defaults()
 
 -- if you just want default config for the servers then put them in a table
 -- make sure these can be manged with mason
