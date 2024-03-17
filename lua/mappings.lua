@@ -8,3 +8,27 @@ vim.keymap.set("n", "<leader>fm", function()
 end, { desc = "File Format with conform" })
 
 vim.keymap.set("i", "jk", "<ESC>", { desc = "Escape insert mode" })
+
+------------------------------------------------------------
+-- for `fedepujol/move.nvim` support fast move
+------------------------------------------------------------
+local move_opts = { noremap = true, silent = true }
+-- Normal-mode commands
+vim.keymap.set('n', '<A-j>', ':MoveLine(1)<CR>', move_opts)
+vim.keymap.set('n', '<A-k>', ':MoveLine(-1)<CR>', move_opts)
+vim.keymap.set('n', '<A-h>', ':MoveHChar(-1)<CR>', move_opts)
+vim.keymap.set('n', '<A-l>', ':MoveHChar(1)<CR>', move_opts)
+vim.keymap.set('n', '<leader>mf', ':MoveWord(1)<CR>', move_opts)
+vim.keymap.set('n', '<leader>mb', ':MoveWord(-1)<CR>', move_opts)
+-- Visual-mode commands
+vim.keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', move_opts)
+vim.keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', move_opts)
+vim.keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', move_opts)
+vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', move_opts)
+
+
+------------------------------------------------------------
+-- for overriding `fedepujol/move.nvim` 
+------------------------------------------------------------
+vim.keymap.set('n', '<space>rs', vim.lsp.buf.rename, { desc = "Refactore: Rename Symbol"})
+
