@@ -50,8 +50,7 @@ local plugins = {
 		-- 	return require("configs.treesitter-textobjects")
 		-- end,
 		config = function()
-			opts = require("configs.treesitter-textobjects")
-			-- opts = require("configs.ttr")
+			local opts = require("configs.treesitter-textobjects")
 			require("nvim-treesitter.configs").setup(opts)
 		end,
 	},
@@ -79,9 +78,12 @@ local plugins = {
 	--    delete(functi*on calls)     dsf             function calls
 	{
 		"kylechui/nvim-surround",
-		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
 		config = function()
-			require("nvim-surround").setup()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
 		end,
 	},
 	-- for better file explorer
