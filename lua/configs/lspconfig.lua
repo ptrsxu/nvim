@@ -9,7 +9,7 @@ configs.defaults()
 
 -- if you just want default config for the servers then put them in a table
 -- make sure these can be manged with mason
-local servers = { "html", "cssls", "tsserver", "clangd", "pyright", "ruff_lsp", "gopls" }
+local servers = { "html", "htmx", "cssls", "tsserver", "clangd", "pyright", "ruff_lsp", "gopls" }
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({

@@ -7,6 +7,7 @@ local options = {
 		-- web dev stuff
 		"css-lsp",
 		"html-lsp",
+    "htmx-lsp",
 		"typescript-language-server",
 		"deno",
 		"prettier",
