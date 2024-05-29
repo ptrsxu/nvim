@@ -37,3 +37,7 @@ require("nvchad.autocmds")
 vim.schedule(function()
 	require("mappings")
 end)
+
+
+-- add some configs for neovide
+vim.g.neovide_input_macos_option_key_is_meta = 'only_left'
