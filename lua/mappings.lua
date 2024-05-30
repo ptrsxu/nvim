@@ -32,6 +32,6 @@ vim.keymap.set("v", "<A-l>", ":MoveHBlock(1)<CR>", move_opts)
 vim.keymap.set("n", "<space>rs", vim.lsp.buf.rename, { desc = "Refactore: Rename Symbol" })
 vim.keymap.set("n", "<space>ts", function()
 	if vim.lsp.inlay_hint then
-		vim.lsp.inlay_hint.enable(0, not vim.lsp.inlay_hint.is_enabled())
+		vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 	end
 end, { desc = "Toggle Inlay Hints" })
