@@ -35,3 +35,6 @@ vim.keymap.set("n", "<space>ts", function()
 		vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 	end
 end, { desc = "Toggle Inlay Hints" })
+
+vim.keymap.set("n", "<space>rr", ":Rest run<CR>", { desc = "Run Request" })
+vim.keymap.set("n", "<space>rl", ":Rest run last<CR>", { desc = "Re-run Last Request" })

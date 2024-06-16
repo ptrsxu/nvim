@@ -3,6 +3,7 @@ local options = {
 		"vim",
 		"lua",
 		"html",
+    "http",
 		"css",
 		"javascript",
 		"typescript",
@@ -29,6 +30,7 @@ local options = {
 		"json",
 		"dockerfile",
 		"gitignore",
+    "graphql",
 	},
 	incremental_selection = {
 		enable = true,
