@@ -38,4 +38,4 @@ end, { desc = "Toggle Inlay Hints" })
 
 vim.keymap.set("n", "<space>rr", ":Rest run<CR>", { desc = "Rest Run Request" })
 vim.keymap.set("n", "<space>rl", ":Rest run last<CR>", { desc = "Rest Run Last Request" })
-vim.keymap.set("n", "<space>re", ":lua require("telescope").extensions.rest.select_env()<CR>", { desc = "Rest Run Load Env File" })
+vim.keymap.set("n", "<space>re", ":lua require(\"telescope\").extensions.rest.select_env()<CR>", { desc = "Rest Run Load Env File" })
