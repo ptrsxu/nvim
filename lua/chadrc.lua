@@ -83,4 +83,11 @@ M.ui = {
 	},
 }
 
+local mason_pkgs = require("configs.mason").ensure_installed
+
+M.mason = {
+	cmd = true,
+	pkgs = mason_pkgs,
+}
+
 return M
