@@ -27,7 +27,33 @@ vim.keymap.set("v", "<A-h>", ":MoveHBlock(-1)<CR>", move_opts)
 vim.keymap.set("v", "<A-l>", ":MoveHBlock(1)<CR>", move_opts)
 
 ------------------------------------------------------------
--- for overriding `fedepujol/move.nvim`
+-- for overriding `nvterm`
+------------------------------------------------------------
+local map = vim.keymap.set
+
+map("n", "<leader>t-", function()
+  require("nvchad.term").new { pos = "sp" }
+end, { desc = "terminal new horizontal term" })
+
+map("n", "<leader>t\\", function()
+  require("nvchad.term").new { pos = "vsp" }
+end, { desc = "terminal new vertical window" })
+
+map({ "n", "t" }, "<A-\\>", function()
+  require("nvchad.term").toggle { pos = "vsp", id = "vtoggleTerm" }
+end, { desc = "terminal toggleable vertical term" })
+
+map({ "n", "t" }, "<A-->", function()
+  require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
+end, { desc = "terminal new horizontal term" })
+
+map({ "n", "t" }, "<A-i>", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
+end, { desc = "terminal toggle floating term" })
+
+
+------------------------------------------------------------
+-- for overriding `inner` settings
 ------------------------------------------------------------
 vim.keymap.set("n", "<space>rs", vim.lsp.buf.rename, { desc = "Refactore: Rename Symbol" })
 vim.keymap.set("n", "<space>ts", function()
