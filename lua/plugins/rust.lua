@@ -53,7 +53,7 @@ return {
 					require("crates").upgrade_crate()
 				end,
 				mode = { "n", "x", "o" },
-				desc = "Update Crates",
+				desc = "Update A Crate",
 			},
 			{
 				"<leader>rua",
@@ -61,7 +61,7 @@ return {
 					require("crates").upgrade_all_crates()
 				end,
 				mode = { "n", "x", "o" },
-				desc = "Update Crates",
+				desc = "Update All Crates",
 			},
 		},
 	},
