@@ -34,6 +34,14 @@ return {
 			{
 				"<leader>ruc",
 				function()
+					require("crates").upgrade_crate()
+				end,
+				mode = { "n", "x", "o" },
+				desc = "Update Crates",
+			},
+			{
+				"<leader>rua",
+				function()
 					require("crates").upgrade_all_crates()
 				end,
 				mode = { "n", "x", "o" },
