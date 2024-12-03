@@ -50,18 +50,34 @@ return {
 			{
 				"<leader>ruc",
 				function()
+					require("crates").update_crate()
+				end,
+				mode = { "n", "x", "o" },
+				desc = "Update A Crate (Compatible)",
+			},
+			{
+				"<leader>ruC",
+				function()
 					require("crates").upgrade_crate()
 				end,
 				mode = { "n", "x", "o" },
-				desc = "Update A Crate",
+				desc = "Upgrade A Crate (Break Change)",
 			},
 			{
 				"<leader>rua",
 				function()
+					require("crates").update_all_crates()
+				end,
+				mode = { "n", "x", "o" },
+				desc = "Update All Crates (Compatible)",
+			},
+			{
+				"<leader>ruA",
+				function()
 					require("crates").upgrade_all_crates()
 				end,
 				mode = { "n", "x", "o" },
-				desc = "Update All Crates",
+				desc = "Upgrade All Crates(Break Change)",
 			},
 		},
 	},
