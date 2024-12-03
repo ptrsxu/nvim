@@ -32,6 +32,22 @@ return {
 		end,
 		keys = {
 			{
+				"<leader>roc",
+				function()
+					require("crates").open_crates_io()
+				end,
+				mode = { "n", "x", "o" },
+				desc = "Open Crates.IO",
+			},
+			{
+				"<leader>rod",
+				function()
+					require("crates").open_documentation()
+				end,
+				mode = { "n", "x", "o" },
+				desc = "Open Crate Documentation",
+			},
+			{
 				"<leader>ruc",
 				function()
 					require("crates").upgrade_crate()
